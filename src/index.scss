@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@splidejs/react-splide/css";
+
+// or other themes
+@import "@splidejs/react-splide/css/skyblue";
+@import "@splidejs/react-splide/css/sea-green";
+
+// or only core styles
+@import "@splidejs/react-splide/css/core";
+
+
+// Variables
+$main: #078b96;
+$secondary: #94b0b3;
+$black: #1a1a1a;
+
+
+html {
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+.border-main-color {
+  border-color: #078b96;
+}
+
+.text-main-color {
+  color: $main;
+}
+.text-secondary-color {
+  color: $secondary;
+}
+.text-black-color {
+  color: $black;
+}
+
+.hover\:text-main-color:hover {
+  color: $main;
+}
+.hover\:text-secondary-color:hover {
+  color: $secondary;
+}
+.hover\:text-black-color:hover {
+  color: $black;
+}
+
+.hover\:bg-main-color:hover {
+  background-color: $main;
+}
+
+.bg-main-color {
+  background-color: $main;
+}
+
+.splide {
+  padding: 2rem 1rem 0;
+
+  .splide__arrows {
+    .splide__arrow {
+      top: 0 !important;
+      background-color: $main;
+      &:hover {
+        svg {
+          fill: white;
+        }
+      }
+
+      &.splide__arrow--prev {
+        left: auto !important;
+        right: 4rem;
+      }
+
+      svg {
+        fill: white;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}
+.splide__pagination {
+  bottom: -2rem;
+}
+
+.splide__list,
+.splide__pagination {
+  direction: ltr;
+}

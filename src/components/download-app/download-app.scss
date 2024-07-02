@@ -1,0 +1,32 @@
+.download {
+    background-color: #9cd1d5;
+    position: relative;
+    &::after {
+        content: '';
+        background-color: #cde8ea;
+        width: 50rem;
+        height: 50rem;
+        border-radius: 50%;
+        position: absolute;
+        left: -11rem;
+        top: -11rem;
+        z-index: 0;
+    }
+    .download-text,
+    .download-img {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .download {
+        &::after {
+            width: 25rem;
+            height: 25rem;
+            left: -13rem;
+            top: -6rem;
+        
+        }
+    }
+}
